@@ -10,7 +10,7 @@ namespace Dailyapp
         {
             InitializeComponent();
 
-            MainPage = new View.Login();
+            MainPage = new /*View.Login*/View.Activities();
         }
 
         protected override void OnStart()
