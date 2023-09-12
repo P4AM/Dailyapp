@@ -10,8 +10,8 @@
         <Grid RowDefinitions="Auto,*,Auto">
             <Image Source="logo.png" HeightRequest="90" Margin="0,100,0,50"/>
             <StackLayout Grid.Row="1">
-                <Button Text="Login" Margin="80,40,80,20"/>
-                <Button Text="Register" Margin="80,0,80,0"/>
+                <Button Text="Login" Margin="80,40,80,20"  Clicked="loginButton_Clicked" />
+                <Button Text="Register" Margin="80,0,80,0"  Clicked="registerButton_Clicked" />
             </StackLayout>
         </Grid>
     </Grid>

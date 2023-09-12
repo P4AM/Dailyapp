@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dailyapp.View.Register" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" 
+                   Margin="0,20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="20"
+                   Text="Registrate" />
+            <StackLayout Grid.Row="1" Margin="40,70,40,0">
+                <Label Text="Usuario" />
+                <Entry Placeholder="Usuario" />
+                <Label Text="Contraseña" />
+                <Entry Placeholder="Contraseña" />
+                <Label Text="Repita Contraseña" />
+                <Entry Placeholder="Contraseña" />
+                <Button Text="Registrar" x:Name="Registrarbutt"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Dailyapp.Data;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,25 @@ namespace Dailyapp.View
 		public Activities ()
 		{
 			InitializeComponent ();
+		}
+		
+		public void dibujaactivities()
+		{
+			try
+			{
+				Activitiesdraw.Children.Clear();
+				ConexionMain.Abrir();
+				SqlCommand coma = new SqlCommand("select * from dailyactivies", ConexionMain.conectar);
+				SqlDataReader rdear = coma.ExecuteReader();
+				while (rdear.Read())
+				{
+
+				}
+            }
+			catch (Exception)
+			{
+
+			}
 		}
 	}
 }

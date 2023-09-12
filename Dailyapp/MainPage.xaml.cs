@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dailyapp.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,6 +14,16 @@ namespace Dailyapp
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        async void registerButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.Register());
+        }
+
+        async void loginButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.Login());
         }
     }
 }

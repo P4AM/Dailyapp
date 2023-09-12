@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Dailyapp.View.Login">
+             x:Class="Dailyapp.View.Login" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <Grid BackgroundColor="DarkGray">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="50" />
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Grid.Row="0"
                    HorizontalOptions="Center"
@@ -17,16 +17,18 @@
                    FontSize="30"
                    Text="Bienvenido Inicie Sesion"/>
             <StackLayout Grid.Row="1" Padding="40,20" >
-                <StackLayout>
+                <StackLayout Margin="0,70,0,30">
                     <Label Text="Usuario" />
                     <Entry Placeholder="Usuario" PlaceholderColor="Black"/>
                     <Label Text="Contraseña"/>
                     <Entry Placeholder="Contraseña" PlaceholderColor="Black"/>
-                    <Button Text="Iniciar Sesion" CornerRadius="20"/>
+                    <Button Text="Iniciar Sesion" CornerRadius="20" x:Name="loginButton" Clicked="Ingresar"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="¿recuperar contraseña?"/>
-                    <Label Text="Registrarse" HorizontalOptions="EndAndExpand" FontAttributes="Bold"/>
+                    <Label Text="¿recuperar contraseña?" />
+                    <Label Text="Registrarse" 
+                           HorizontalOptions="EndAndExpand" 
+                           FontAttributes="Bold"/>
                 </StackLayout>
             </StackLayout>
         </Grid>
