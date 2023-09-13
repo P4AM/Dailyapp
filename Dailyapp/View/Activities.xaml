@@ -24,12 +24,20 @@
                              VerticalOptions="Center"
                              Margin="0,20,0,20"
                              BackgroundColor="Transparent"/>
-                <RelativeLayout x:Name="Activitiesdraw" >
-                    
-                </RelativeLayout>
+                <StackLayout x:Name="Activitiesdraw" 
+                             Margin="40,10" 
+                             BackgroundColor="Aqua"
+                             Padding="0,10,10,10">
+                    <Grid ColumnDefinitions="*">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry Placeholder="nombre actividad"/>
+                            <TimePicker />
+                            <DatePicker />
+                        </StackLayout>
+                    </Grid>
+                    <Editor />
+                </StackLayout>
             </StackLayout>
-            
-            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -10,7 +10,7 @@ namespace Dailyapp
         {
             InitializeComponent();
 
-            MainPage = new View.Activities();
+            MainPage = new View.Register();
             //MainPage = new NavigationPage(new MainPage());
         }
 

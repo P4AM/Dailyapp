@@ -23,14 +23,7 @@ namespace Dailyapp.View
 		{
 			try
 			{
-				Activitiesdraw.Children.Clear();
-				ConexionMain.Abrir();
-				SqlCommand coma = new SqlCommand("select * from dailyactivies", ConexionMain.conectar);
-				SqlDataReader rdear = coma.ExecuteReader();
-				while (rdear.Read())
-				{
-
-				}
+				
             }
 			catch (Exception)
 			{

@@ -18,14 +18,12 @@
                    VerticalOptions="Center"
                    FontSize="20"
                    Text="Registrate" />
-            <StackLayout Grid.Row="1" Margin="40,70,40,0">
+            <StackLayout x:Name="registro" Grid.Row="1" Margin="40,70,40,0">
                 <Label Text="Usuario" />
-                <Entry Placeholder="Usuario" />
+                <Entry Placeholder="Usuario" x:Name="DailyUser"/>
                 <Label Text="Contraseña" />
-                <Entry Placeholder="Contraseña" />
-                <Label Text="Repita Contraseña" />
-                <Entry Placeholder="Contraseña" />
-                <Button Text="Registrar" x:Name="Registrarbutt"/>
+                <Entry Placeholder="Contraseña" x:Name="PasswordUser" />
+                <Button Text="Registrar" x:Name="Registrarbutt" Clicked="Registrarbutt_Clicked"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>
