@@ -24,16 +24,17 @@ namespace Dailyapp.View
         {
 			try
 			{
+                ConexionMain cn = new ConexionMain();
+                ConexionMain.Abrir();
 
-                    ConexionMain.Abrir();
-
-                    SqlCommand cmd = new SqlCommand("INSERT INTO dailyuser(username,userpass) values(@userName,@userPass)", ConexionMain.conectar);
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.Parameters.AddWithValue("@userName", DailyUser);
-                    cmd.Parameters.AddWithValue("@userPass", PasswordUser);
-                    cmd.ExecuteNonQuery();
-                    //DisplayAlert("User Register");
-                    ConexionMain.Cerrar();
+                SqlCommand cmd = new SqlCommand("INSERT INTO dailyuser(username,userpass) values(@userName,@userPass)", ConexionMain.conectar);
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@userName", DailyUser);
+                cmd.Parameters.AddWithValue("@userPass", PasswordUser);
+                cmd.ExecuteNonQuery();
+                //DisplayAlert("User Register");
+                ConexionMain.Cerrar();
+      
                 
             }
 			catch (Exception ex)
