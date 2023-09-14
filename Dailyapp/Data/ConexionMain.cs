@@ -8,7 +8,7 @@ namespace Dailyapp.Data
 {
     internal class ConexionMain
     {
-        public static String conexion = "Data Source = 192.168.0.101; Initial Catalog = ;Integrate Security = False; User Id = dailyadmin; Password = 12345678";
+        public static String conexion = "Data Source = 192.168.0.101; Initial Catalog = DESKTOP-I9OFA2R;Integrate Security = False; User Id = dailyadmin; Password = 12345678";
         public static SqlConnection conectar = new SqlConnection(conexion);
         public static void Abrir()
         {
